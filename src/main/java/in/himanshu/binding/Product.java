@@ -1,10 +1,17 @@
 package in.himanshu.binding;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public class Product {
-		
+	
+	@NotNull(message = "id is req")
 	private Integer pid;
+	@NotBlank(message = "name is req")
 	private String pname;
+	@NotNull(message = "price is req")
 	private Double price;
+	
 	public Integer getPid() {
 		return pid;
 	}
